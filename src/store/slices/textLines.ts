@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { TextLine } from "../../types/textLine";
 
+//slice to store information for table rendering: array of data which contains text, amount of words ans vowels in it
 interface State {
   textLines: TextLine[];
 }
@@ -13,11 +14,9 @@ const slice = createSlice({
   name: "textLines",
   initialState,
   reducers: {
+    // reducer to simply set array of texts with amount of words and vowels
     setTextLines: (state, { payload: textLines }) => {
       state.textLines = textLines;
-    },
-    addTextLine: (state, { payload: textLine }) => {
-      state.textLines.push(textLine);
     },
   },
 });

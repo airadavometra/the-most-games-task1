@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import React, { FunctionComponent } from "react";
 import { TextLine } from "../../types/textLine";
 import "./TableSection.css";
@@ -26,6 +25,7 @@ export const TableSection: FunctionComponent<TableSectionProps> = ({
           <tbody>
             {textLines.map((textLine, index) => (
               <tr key={index}>
+                {/* convert each text into the row */}
                 {Object.values(textLine).map((value, index) => (
                   <td key={index} className="tableCell">
                     {value}
