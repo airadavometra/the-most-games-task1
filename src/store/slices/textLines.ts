@@ -1,19 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { TextLine } from "../../types/textLine";
 
 interface State {
-  textLine: string;
+  textLines: TextLine[];
 }
 
 const initialState: State = {
-  textLine: "",
+  textLines: [],
 };
 
 const slice = createSlice({
   name: "textLines",
   initialState,
   reducers: {
-    setFilter: (state, { payload: newFilter }) => {
-      state.textLine = newFilter;
+    setTextLines: (state, { payload: textLines }) => {
+      state.textLines = textLines;
+    },
+    addTextLine: (state, { payload: textLine }) => {
+      state.textLines.push(textLine);
     },
   },
 });

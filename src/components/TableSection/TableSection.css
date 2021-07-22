@@ -1,0 +1,9 @@
+.table {
+  width: 80vw;
+  padding: 0.5vh 1vw;
+  border: 1px solid black;
+  border-spacing: clamp(6px, 1vw, 16px);
+}
+.tableCell:not(:first-child) {
+  text-align: center;
+}
